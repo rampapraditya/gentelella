@@ -2,6 +2,6 @@
 
 ## Belajar Untuk LATEK
 
-- code igniter 4
+- CodeIgniter 4
 - mysql
 - template
