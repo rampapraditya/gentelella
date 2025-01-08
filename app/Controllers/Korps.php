@@ -2,10 +2,21 @@
 
 namespace App\Controllers;
 
+use App\Models\Mcustom;
+
 class Korps extends BaseController
 {
-    public function index(): string
+    
+    private $mcustom;
+    
+    public function __construct() {
+        $this->mcustom = new Mcustom();
+    }
+    
+    public function index()
     {
-        return view('korps/index');
+        $data['list'] = $this->mcustom->getAll("korps");
+        
+        return view('korps/index', $data);
     }
 }
